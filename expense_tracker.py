@@ -28,7 +28,8 @@ def main():
             print(f"Added ${amount:.2f} to {category} expenses.")
         
         elif choice == '2':
-            print(expenses.items() )
+            for category, amount in expenses.items():
+                print(f"{category}: ${amount:.2f}")
         
         elif choice == '3':
             print("Exiting the Expense Tracker. Goodbye!")
@@ -40,8 +41,3 @@ def main():
 if __name__ == "__main__":
         main()
 
-
-mydict = {'apple' : 3, 'banana' : 5, 'orange' : 2}
-new_apple_price = 4
-mydict['apple'] = new_apple_price
-print(mydict)
